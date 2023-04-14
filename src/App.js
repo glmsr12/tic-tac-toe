@@ -33,10 +33,23 @@ function App() {
       [2, 4, 6],
     ];
   };
+  winningCombos.forEach((array) => {
+    let circleWins = array.every((cubicle) => cubicles[cubicle] === 'circle');
+    if (circleWins) {
+      setWinningMessage('Circle Wins!');
+    }
+  });
+
+  winningCombos.forEach((array) => {
+    let crossWins = array.every((cubicle) => cubicles[cubicle] === 'circle');
+    if (crossWins) {
+      setWinningMessage('Cross Wins!');
+    }
+  });
 
   useEffect(() => {
     checkScore();
-  }, [cubicles]);
+  }, []);
 
   return (
     <div className="app">
@@ -50,11 +63,12 @@ function App() {
             go={go}
             setGo={setGo}
             cubicles={cubicles}
+            winningMessage={winningMessage}
           />
         ))}
       </div>
 
-      <p className="message">{message}</p>
+      <p className="message">{winningMessage || message}</p>
     </div>
   );
 }
