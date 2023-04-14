@@ -1,5 +1,8 @@
-const Cubicle = () => {
-  return <div className="square"></div>;
+const Cubicle = (id, cubicle) => {
+  const handleClick = (e) => {
+    console.log(e.target);
+  };
+  return <div className="square" id={id} onClick={handleClick}></div>;
 };
 
 export default Cubicle;
