@@ -1,4 +1,4 @@
-const Cubicle = ({ id, cubicle, setCubicles, go }) => {
+const Cubicle = ({ id, cubicle, setCubicles, go, setGo }) => {
   const handleClick = (e) => {
     const taken =
       e.target.firstChild.classList.contains('circle') ||
@@ -7,9 +7,11 @@ const Cubicle = ({ id, cubicle, setCubicles, go }) => {
     if (!taken) {
       if (go === 'circle') {
         e.target.firstChild.classList.add('circle');
+        setGo('cross');
       }
       if (go === 'cross') {
         e.target.firstChild.classList.add('cross');
+        setGo('circle');
       }
     }
   };
