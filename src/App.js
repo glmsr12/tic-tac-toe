@@ -17,7 +17,9 @@ function App() {
   const [go, setGo] = useState('circle');
   const [winningMessage, setWinningMessage] = useState(null);
 
-  const message = 'it is now' + go + " 's go.";
+  const message = 'it is now ' + go + " 's go.";
+
+  console.log(message);
 
   return (
     <div className="app">
@@ -30,6 +32,7 @@ function App() {
             setCubicles={setCubicles}
             go={go}
             setGo={setGo}
+            cubicles={cubicles}
           />
         ))}
       </div>
