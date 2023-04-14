@@ -32,24 +32,23 @@ function App() {
       [0, 4, 8],
       [2, 4, 6],
     ];
+    winningCombos.forEach((array) => {
+      let circleWins = array.every((cubicle) => cubicles[cubicle] === 'circle');
+      if (circleWins) {
+        setWinningMessage('Circle Wins!');
+      }
+    });
+    winningCombos.forEach((array) => {
+      let crossWins = array.every((cubicle) => cubicles[cubicle] === 'circle');
+      if (crossWins) {
+        setWinningMessage('Cross Wins!');
+      }
+    });
   };
-  winningCombos.forEach((array) => {
-    let circleWins = array.every((cubicle) => cubicles[cubicle] === 'circle');
-    if (circleWins) {
-      setWinningMessage('Circle Wins!');
-    }
-  });
-
-  winningCombos.forEach((array) => {
-    let crossWins = array.every((cubicle) => cubicles[cubicle] === 'circle');
-    if (crossWins) {
-      setWinningMessage('Cross Wins!');
-    }
-  });
 
   useEffect(() => {
     checkScore();
-  }, []);
+  }, [cubicles]);
 
   return (
     <div className="app">
