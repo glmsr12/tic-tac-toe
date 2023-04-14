@@ -1,4 +1,4 @@
-const Cubicle = (id, cubicle) => {
+const Cubicle = ({ id, cubicle }) => {
   const handleClick = (e) => {
     console.log(e.target);
   };
