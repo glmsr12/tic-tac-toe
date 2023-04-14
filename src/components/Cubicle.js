@@ -1,4 +1,12 @@
-const Cubicle = ({ id, cubicle, setCubicles, go, setGo, cubicles }) => {
+const Cubicle = ({
+  id,
+  cubicle,
+  setCubicles,
+  go,
+  setGo,
+  cubicles,
+  winningMessage,
+}) => {
   const handleClick = (e) => {
     const taken =
       e.target.firstChild.classList.contains('circle') ||
@@ -30,7 +38,7 @@ const Cubicle = ({ id, cubicle, setCubicles, go, setGo, cubicles }) => {
   };
 
   return (
-    <div className="square" id={id} onClick={handleClick}>
+    <div className="square" id={id} onClick={!winningMessage && handleClick}>
       <div className={cubicle}></div>
     </div>
   );

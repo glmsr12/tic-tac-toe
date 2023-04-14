@@ -39,7 +39,7 @@ function App() {
       }
     });
     winningCombos.forEach((array) => {
-      let crossWins = array.every((cubicle) => cubicles[cubicle] === 'circle');
+      let crossWins = array.every((cubicle) => cubicles[cubicle] === 'cross');
       if (crossWins) {
         setWinningMessage('Cross Wins!');
       }
