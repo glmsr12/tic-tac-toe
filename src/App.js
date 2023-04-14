@@ -28,6 +28,8 @@ function App() {
             id={index}
             cubicle={cubicle}
             setCubicles={setCubicles}
+            go={go}
+            setGo={setGo}
           />
         ))}
       </div>
