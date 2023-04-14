@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Cubicle from './components/Cubicle';
 
 function App() {
@@ -17,9 +17,26 @@ function App() {
   const [go, setGo] = useState('circle');
   const [winningMessage, setWinningMessage] = useState(null);
 
-  const message = 'it is now ' + go + " 's go.";
+  const message = 'It is now ' + go + " 's go.";
 
-  console.log(message);
+  console.log(cubicles);
+
+  const checkScore = () => {
+    const winningCombos = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6.7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+    ];
+  };
+
+  useEffect(() => {
+    checkScore();
+  }, [cubicles]);
 
   return (
     <div className="app">
@@ -37,7 +54,7 @@ function App() {
         ))}
       </div>
 
-      <p>{message}</p>
+      <p className="message">{message}</p>
     </div>
   );
 }
