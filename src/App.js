@@ -1,5 +1,11 @@
+import Cubicle from './components/Cubicle';
+
 function App() {
-  return <div className="app"></div>;
+  return (
+    <div className="app">
+      <Cubicle />
+    </div>
+  );
 }
 
 export default App;
