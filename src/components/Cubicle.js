@@ -1,4 +1,4 @@
-const Cubicle = ({ id, cubicle, setCubicles, go, setGo }) => {
+const Cubicle = ({ id, cubicle, setCubicles, go, setGo, cubicles }) => {
   const handleClick = (e) => {
     const taken =
       e.target.firstChild.classList.contains('circle') ||

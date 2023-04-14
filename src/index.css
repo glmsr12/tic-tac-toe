@@ -60,3 +60,9 @@
   margin-top: -15%;
   width: 100%;
 }
+
+.message {
+  font-size: 1.6rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(63, 5, 117);
+}
