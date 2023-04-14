@@ -1,5 +1,5 @@
 const Cubicle = () => {
-  return <div></div>;
+  return <div className="square"></div>;
 };
 
 export default Cubicle;

@@ -1,9 +1,14 @@
+import { useState } from 'react';
 import Cubicle from './components/Cubicle';
 
 function App() {
   return (
     <div className="app">
-      <Cubicle />
+      <div className="gameboard">
+        <Cubicle />
+      </div>
+
+      <p></p>
     </div>
   );
 }
